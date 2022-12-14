@@ -1,0 +1,158 @@
+# Site settings
+
+title: ICAM FISMA Metrics Guide
+name: Federal Public Key Infrastructure Guides
+# title: FICAM FPKI Guides
+# name: Federal Public Key Infrastructure [FPKI] Guides
+email: icam@gsa.gov
+author:
+    name: FICAM
+    url: https://github.com/GSA/
+description: A guide on how to collect FISMA metrics, and meet the requirements.
+
+baseurl: '/icam-fisma'
+branch: gh-pages
+#url: "http://yourdomain.com" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+github_username:  GSAllewell
+highlighter: rouge
+
+# Point the logo URL at a file in your repo or hosted elsewhere by your organization
+logourl: /fpki-guides/img/logo.png
+logoalt: Federal Identity Credential and Access Management
+
+# Custom URLs
+ficam_playbooks_url: /ficam-guides/
+
+ficam_architecture_url: https://gsa.github.io/ficam-arch/
+ficam_architecture_gh_url: https://github.com/GSA/ficam-arch
+
+# Repo list
+# List repos that you would like to appear on the homepage here
+repos:
+- name: fpki-guides
+  description: FICAM Playbook - FPKI Guidance
+  url: https://github.com/gsa/fpki-guides
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+exclude:
+- bin
+- config.rb
+- Gemfile
+- Gemfile.lock
+- gems
+- Procfile
+- Rakefile
+- README.md
+- script
+- vendor
+
+navigation:
+- text: Introduction
+  url: index.html
+  internal: true
+  coll: false
+- text: Approach
+  url: approach
+  internal: true
+  coll: false
+- text: How to Navigate
+  url: navigation
+  internal: true
+  coll: false
+- text: Tools & Tips
+  url: tools-tips/searchAD
+  internal: true
+  coll: true
+  collname: tools-tips
+- text: Privileged Accounts & Users
+  url: priv-mgmt/main-priv
+  internal: true
+  coll: true
+  collname: priv-mgmt
+- text: Unprivileged Accounts & Users
+  url: unpriv-mgmt/main-unpriv
+  internal: true
+  coll: true
+  collname: unpriv-mgmt
+- text: Access & Credential Revocation
+  url: cred-revoke/main-revoke
+  internal: true
+  coll: true
+  collname: cred-revoke
+- text: Physical Acccess Control Systems (PACS)
+  url: pacs/main-pacs
+  internal: true
+  coll: true
+  collname: pacs
+- text: Data Protection & Remote Access
+  url: data-protect/main-data
+  internal: true
+  coll: true
+  collname: data-protect
+- text: Next Steps
+  url: next
+  internal: true
+  coll: false
+#https://github.com/jekyll/jekyll/issues/2346
+#- text: Developer Guides
+#  url: devconfig/index/
+#  internal: true
+#  coll: true
+#  collname: devconfig
+#- text: User Guides
+#  url: userconfig/index/
+#  internal: true
+#  coll: true
+#  collname: userconfig
+- text: Contribute
+  url: contribute
+  internal: true
+  coll: false
+collections:
+  tools-tips:
+    label: "Tools and Tips"
+    permalink: /tools-tips/:path/
+    output: true
+  userconfig:
+    label: "User Guides"
+    permalink: /userconfig/:path/
+    output: true
+  priv-mgmt:
+    label: "Privileged Accounts & Users"
+    permalink: /priv-mgmt/:path/
+    output: true
+  unpriv-mgmt:
+    label: "Unprivileged Accounts & Users"
+    permalink: /unpriv-mgmt/:path/
+    output: true
+  cred-revoke:
+    label: "Access & Credential Revocation"
+    permalink: /cred-revoke/:path/
+    output: true
+  pacs:
+    label: "Physical Access Control Systems (PACS)"
+    permalink: /pacs/:path/
+    output: true    
+  data-protect:
+    label: "Data Protection & Remote Access"
+    permalink: /data-protect/:path/
+    output: true       
+    
+  #https://github.com/jekyll/jekyll/issues/2346
+
+
+include:
+- _stylesheets
+- _javascript
+
+
+
+# Custom site configuration
+lang: en
